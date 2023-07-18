@@ -58,6 +58,7 @@ let addedCourses = [
     rating: 3.8,
   }
 ];
-
-let newCourses = [...courses, ...addedCourses]
-console.log(newCourses);
+let newCourses = (courses, addedCourses) => {
+  return [...courses, ...addedCourses];
+}
+console.log(newCourses(courses, addedCourses));
