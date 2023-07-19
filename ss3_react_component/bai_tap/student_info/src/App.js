@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { Component } from 'react';
 
 function App() {
   return (
@@ -21,5 +22,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
