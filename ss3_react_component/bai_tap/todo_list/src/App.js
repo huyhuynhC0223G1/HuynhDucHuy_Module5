@@ -11,12 +11,16 @@ class App extends Component {
     };
   }
   handleChange = (event) => {
-    this.setState({ item: event.target.value })
+    this.setState(() => ({
+      item: event.target.value
+    }))
   }
   handleAddItem = () => {
     if (this.state.item !== '') {
-      const newList = [...this.state.list, this.state.item];
-      this.setState({ list: newList, item: '' });
+      this.setState(() => ({
+        list: [...this.state.list, this.state.item],
+        item: ''
+      }));
     }
   }
   render() {
@@ -25,20 +29,18 @@ class App extends Component {
         <h1>Todo List</h1>
         <input type="text" value={this.state.item} onChange={this.handleChange}></input>
         <button onClick={this.handleAddItem}>ADD</button>
-        <table style={{ marginLeft: '355px' }}>
-          {this.state.list.map((item, index) => (
-            <tbody>
+        <table style={{ marginLeft: '42%' }}>
+          <tbody>
+            {this.state.list.map((item, index) => (
               <tr key={index}>
                 <td>{index + 1}: </td>
                 <td>{item}</td>
               </tr>
-            </tbody>
-          ))}
+            ))}
+          </tbody>
         </table>
       </div>
     )
   }
 }
-
-
 export default App;
