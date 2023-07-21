@@ -2,7 +2,7 @@
 import './App.css';
 import React, { useState } from "react"
 
-function useIncrement(addAmount) {
+function useIncrement() {
   const [count, setCount] = useState(0);
 
   function increase(addAmount) {
