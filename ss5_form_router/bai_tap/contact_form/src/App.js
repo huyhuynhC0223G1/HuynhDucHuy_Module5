@@ -11,7 +11,7 @@ function App() {
         initialValues={{ name: "", email: "", phone: "", message: "" }}
         validationSchema={yup.object({
           name: yup.string().required("Name cannot be left blank"),
-          email: yup.string().required("Email cannot be left blank").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Invalid email address"),
+          email: yup.string().required("Email cannot be left blank").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Email address is not valid"),
           phone: yup.string().required("Phone cannot be left blank").length(10,"must be 10 numbers"),
           message: yup.string().required("Message cannot be left blank"),
         })}

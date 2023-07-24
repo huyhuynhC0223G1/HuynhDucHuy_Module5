@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { createTodo, getListTodo } from './TodoService';
+import axios from 'axios';
 
 function App() {
   const [list, setList] = useState([]);
   const [item, setItem] = useState("");
 
-  const handleChange = (event) => {
-    setItem(item.target.value)
-  }
-  const handleItem = () => {
-    if (item != '') {
-      setList([...list, item]);
-      setItem('');
+  useEffect(() => {
+    const getTodo = async () => {
+      const data = await getListTodo();
+      setList(data);
     }
+    getTodo();
+  }, [item])
+
+  const handleChange = (event) => {
+    setItem(event.target.value)
+  }
+
+  const handleItem = async () => {
+    await createTodo({
+      name: item
+    })
+    setItem('');
   }
   return (
     <div style={{ textAlign: 'center' }}>
@@ -21,12 +32,11 @@ function App() {
       <button onClick={handleItem}>ADD</button>
       <table style={{ marginLeft: '42%' }}>
         <tbody>
-          {list.map((item, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{item}</td>
+          {list.map((item) => 
+            <tr key={item.id}>
+              <td>{item.name}</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
