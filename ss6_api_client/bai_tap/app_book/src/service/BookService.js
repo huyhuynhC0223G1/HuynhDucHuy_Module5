@@ -10,6 +10,7 @@ export async function createNewBook(book) {
 }
 export async function deleteBook(id) {
     const res = await axios.delete("http://localhost:8081/books/" + id)
+    alert("You confirm you want to delete?")
     return res.data;
 }
 
