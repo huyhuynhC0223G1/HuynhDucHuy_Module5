@@ -10,10 +10,10 @@ function App() {
       <Formik
         initialValues={{ name: "", email: "", phone: "", message: "" }}
         validationSchema={yup.object({
-          name: yup.string().required("Required"),
-          email: yup.string().required("Required").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Invalid email address"),
-          phone: yup.string().required("Required").length(10),
-          message: yup.string().required("Required"),
+          name: yup.string().required("Name cannot be left blank"),
+          email: yup.string().required("Email cannot be left blank").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Invalid email address"),
+          phone: yup.string().required("Phone cannot be left blank").length(10,"must be 10 numbers"),
+          message: yup.string().required("Message cannot be left blank"),
         })}
         onSubmit={() => {
           alert("Login in successfully!!!");

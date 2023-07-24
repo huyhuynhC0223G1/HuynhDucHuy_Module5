@@ -11,16 +11,16 @@ function App() {
         // workingCompany, workingParts
         initialValues={{ name: "", idCard: "", brithday: "", nationality: "", province: "", district: "", wards: "", villages: "", email: "", phone: "" }}
         validationSchema={yup.object({
-          name: yup.string().required("Required"),
-          idCard: yup.string().required("Required"),
-          brithday: yup.number().required("Required").min(1900, " >1900"),
-          nationality: yup.string().required("Required"),
-          province: yup.string().required("Required"),
-          district: yup.string().required("Required"),
-          wards: yup.string().required("Required"),
-          villages: yup.string().required("Required"),
-          email: yup.string().required("Required").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Invalid email address"),
-          phone: yup.string().required("Required").length(10),
+          name: yup.string().required(" Name cannot be left blank"),
+          idCard: yup.string().required("Id Card cannot be left blank"),
+          brithday: yup.number().required("Brithday cannot be left blank").min(1900, " Year of birth must be greater than 1900"),
+          nationality: yup.string().required("Nationality cannot be left blank"),
+          province: yup.string().required("Province cannot be left blank"),
+          district: yup.string().required("Dstrict cannot be left blank"),
+          wards: yup.string().required("Wards cannot be left blank"),
+          villages: yup.string().required("Villages cannot be left blank"),
+          email: yup.string().required("Email cannot be left blank").matches(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, "Email address is not valid"),
+          phone: yup.string().required("Phone cannot be left blank").length(10, "must be 10 number"),
 
         })}
         onSubmit={() => {
