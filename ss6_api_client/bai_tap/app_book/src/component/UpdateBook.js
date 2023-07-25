@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
-import { updateBook } from '../service/BookService';
+import { getBookById, updateBook } from '../service/BookService';
 
 function UpdateBook() {
     const { id } = useParams();
@@ -10,46 +10,46 @@ function UpdateBook() {
 
     useEffect(() => {
         const fetchBook = async () => {
-            const data = await updateBook(id);
+            const data = await getBookById(id);
             setBook(data);
+            console.log(data);
         };
         fetchBook();
     }, [id]);
 
-    const handleSubmit = async (values, { setSubmitting }) => {
+    const handleSubmit = async (values, {setSubmitting }) => {
         await updateBook(id, values);
         alert('The book has been updated successfully!');
         setBook('');
         navigate("/")
     };
 
-    if (!book) {
-        return <Link to={`/`}><button type="submit">Home</button></Link>;
-    }
-
     return (
         <div>
             <h1>Update Book</h1>
-            <Formik
-                initialValues={book}
-                onSubmit={handleSubmit}
-            >
-                {({ isSubmitting }) => (
-                    <Form>
-                        <div>
-                            <label htmlFor="title">Title</label>
-                            <Field type="text" name="title" />
-                        </div>
-                        <div>
-                            <label htmlFor="quantity">Quantity</label>
-                            <Field type="number" name="quantity" />
-                        </div>
-                        <button type="submit" disabled={isSubmitting}>
-                            Update
-                        </button>
-                    </Form>
-                )}
-            </Formik>
+            {book && (
+                <Formik
+                    initialValues={book}
+                    onSubmit={handleSubmit}
+                    enableReinitialize
+                >
+                    {({ isSubmitting }) => (
+                        <Form>
+                            <div>
+                                <label htmlFor="title">Title</label>
+                                <Field type="text" name="title" />
+                            </div>
+                            <div>
+                                <label htmlFor="quantity">Quantity</label>
+                                <Field type="number" name="quantity" />
+                            </div>
+                            <button type="submit" disabled={isSubmitting}>
+                                Update
+                            </button>
+                        </Form>
+                    )}
+                </Formik>
+            )}
         </div>
     );
 }

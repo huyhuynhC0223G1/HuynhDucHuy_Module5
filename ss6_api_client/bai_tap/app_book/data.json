@@ -1,11 +1,6 @@
 {
   "books": [
     {
-      "id": 1,
-      "title": "json-server",
-      "quantity": 222
-    },
-    {
       "id": 2,
       "title": "king",
       "quantity": 10
@@ -13,27 +8,12 @@
     {
       "id": 3,
       "title": "queen",
-      "quantity": 10
+      "quantity": 22
     },
     {
-      "title": "sd",
-      "quantity": 42,
+      "title": "qqqqq",
+      "quantity": 1111,
       "id": 4
-    },
-    {
-      "title": "wwww",
-      "quantity": 111,
-      "id": 5
-    },
-    {
-      "title": "qqq",
-      "quantity": 111,
-      "id": 6
-    },
-    {
-      "title": "qqq",
-      "quantity": 2222,
-      "id": 7
     }
   ]
 }

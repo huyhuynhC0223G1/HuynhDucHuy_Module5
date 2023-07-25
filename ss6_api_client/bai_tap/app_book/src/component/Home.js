@@ -34,10 +34,11 @@ function Home() {
                             <td>{book.title}</td>
                             <td>{book.quantity}</td>
                             <td>
-                                <button type="button" onClick={async () => {
-                                    await deleteBook(book.id);
-                                    setBook(book.id);
-                                }}>DELETE</button>
+                                <a href="#deleteModal" className="delete" title="Delete" data-toggle="modal">
+                                    <button type="button" onClick={async () => {
+                                        await deleteBook(book.id);
+                                        setBook(book.id);
+                                    }}>DELETE</button></a>
                                 <Link to={`/update/${book.id}`}>
                                     <button type="submit">UPDATE</button>
                                 </Link>
@@ -46,6 +47,26 @@ function Home() {
                     ))}
                 </tbody>
             </table>
+            <div id="deleteModal" className="modal fade">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <form>
+                            <div className="modal-header" style={{ background: '#575041', color: 'white' }}>
+                                <h4 className="modal-title">Delete Service</h4>
+                                <button type="button" className="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div className="modal-body">
+                                <p>Are you sure you want to delete these Records?</p>
+                                <p className="text-warning"><small>This action cannot be undone.</small></p>
+                            </div>
+                            <div className="modal-footer">
+                                <input style={{ background: '#82817f' }} type="button" className="btn btn-default" data-dismiss="modal" defaultValue="Cancel" />
+                                <input style={{ background: '#cda45e' }} type="submit" className="btn btn-danger" defaultValue="Delete" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

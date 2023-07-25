@@ -5,16 +5,19 @@ export async function getListBook() {
     return resolve.data;
 }
 export async function createNewBook(book) {
-    const res = await axios.post("http://localhost:8081/books/", book)
-    return res.data;
+    const resolve = await axios.post("http://localhost:8081/books/", book)
+    return resolve.data;
 }
 export async function deleteBook(id) {
-    const res = await axios.delete("http://localhost:8081/books/" + id)
-    alert("You confirm you want to delete?")
-    return res.data;
+    const resolve = await axios.delete("http://localhost:8081/books/" + id)
+    return resolve.data;
 }
 
 export async function updateBook(id, book) {
-    const res = await axios.patch("http://localhost:8081/books/" + id, book)
-    return res.data;
+    const resolve = await axios.patch("http://localhost:8081/books/" + id, book)
+    return resolve.data;
+}
+export async function getBookById(id) {
+    const resolve = await axios.patch("http://localhost:8081/books/" + id)
+    return resolve.data;
 }
