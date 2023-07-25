@@ -1,8 +1,10 @@
 import { Field, Form, Formik } from "formik";
 import { createNewBook } from "../service/BookService";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function CreateNewBook({ history }) {
+    const navigate= useNavigate();
     return (
         <>
             <h1>Add New Book</h1>
@@ -11,7 +13,7 @@ function CreateNewBook({ history }) {
                 onSubmit={async (values, { setSubmitting }) => {
                     await createNewBook(values);
                     alert("The book has been added successfully!");
-                    history.push("/");
+                    navigate("/")
                 }}
             >
                 {({ isSubmitting }) => (

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import { updateBook } from '../service/BookService';
 
 function UpdateBook() {
     const { id } = useParams();
     const [book, setBook] = useState(null);
+    const navigate= useNavigate();
 
     useEffect(() => {
         const fetchBook = async () => {
@@ -19,6 +20,7 @@ function UpdateBook() {
         await updateBook(id, values);
         alert('The book has been updated successfully!');
         setBook('');
+        navigate("/")
     };
 
     if (!book) {
