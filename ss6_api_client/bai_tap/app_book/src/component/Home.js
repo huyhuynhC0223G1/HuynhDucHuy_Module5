@@ -39,6 +39,7 @@ function Home() {
                                         await deleteBook(book.id);
                                         setBook(book.id);
                                     }}>DELETE</button></a>
+                                    
                                 <Link to={`/update/${book.id}`}>
                                     <button type="submit">UPDATE</button>
                                 </Link>
