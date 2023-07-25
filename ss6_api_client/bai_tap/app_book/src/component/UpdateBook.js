@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Formik, Form, Field } from 'formik';
 import { updateBook } from '../service/BookService';
 
@@ -22,7 +22,7 @@ function UpdateBook() {
     };
 
     if (!book) {
-        return <div>Loading...</div>;
+        return <Link to={`/`}><button type="submit">Home</button></Link>;
     }
 
     return (
