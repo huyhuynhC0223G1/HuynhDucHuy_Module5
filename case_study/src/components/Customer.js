@@ -1,7 +1,9 @@
 import React from "react";
+import { Field, Form, Formik } from "formik";
 
-function Customer() {
+export default function Customer() {
     return (
+<Formik>
         <div>
             <div style={{ background: '#1a1814', height: '1000px' }}>
                 <header id="header" className=" d-flex align-items-center">
@@ -315,5 +317,6 @@ function Customer() {
                 </div>
             </div>
         </div>
+        </Formik>
     );
 }

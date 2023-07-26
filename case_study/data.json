@@ -1,0 +1,240 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "Nguyen Van A",
+      "date_of_birth": "01/01/1990",
+      "gender": "Male",
+      "id_card": "123456789",
+      "phone_number": "0123456789",
+      "email": "nguyenvana@gmail.com",
+      "customer_type": "Regular",
+      "address": "No.1 Street A, District 1, Ho Chi Minh City"
+    },
+    {
+      "id": "2",
+      "name": "Tran Thi B",
+      "date_of_birth": "02/02/1995",
+      "gender": "Female",
+      "id_card": "987654321",
+      "phone_number": "0987654321",
+      "email": "tranthib@yahoo.com",
+      "customer_type": "Regular",
+      "address": "No.2 Street B, District 2, Ho Chi Minh City"
+    },
+    {
+      "id": "3",
+      "name": "Le Minh C",
+      "date_of_birth": "03/03/1985",
+      "gender": "Male",
+      "id_card": "456789123",
+      "phone_number": "0567891234",
+      "email": "leminhc@hotmail.com",
+      "customer_type": "VIP",
+      "address": "No.3 Street C, District 3, Ho Chi Minh City"
+    },
+    {
+      "id": "4",
+      "name": "Pham Thi D",
+      "date_of_birth": "04/04/1992",
+      "gender": "Female",
+      "id_card": "369852147",
+      "phone_number": "0369852147",
+      "email": "phamthid@gmail.com",
+      "customer_type": "Regular",
+      "address": "No.4 Street D, District 4, Ho Chi Minh City"
+    },
+    {
+      "id": "5",
+      "name": "Hoang Van E",
+      "date_of_birth": "05/05/1988",
+      "gender": "Male",
+      "id_card": "258147369",
+      "phone_number": "0258147369",
+      "email": "hoangvane@yahoo.com",
+      "customer_type": "VIP",
+      "address": "No.5 Street E, District 5, Ho Chi Minh City"
+    },
+    {
+      "id": "6",
+      "name": "Nguyen Thi F",
+      "date_of_birth": "06/06/1991",
+      "gender": "Female",
+      "id_card": "147258369",
+      "phone_number": "0147258369",
+      "email": "nguyenthif@hotmail.com",
+      "customer_type": "Regular",
+      "address": "No.6 Street F, District 6, Ho Chi Minh City"
+    },
+    {
+      "id": "7",
+      "name": "Tran Van G",
+      "date_of_birth": "07/07/1987",
+      "gender": "Male",
+      "id_card": "963852741",
+      "phone_number": "0963852741",
+      "email": "tranvang@gmail.com",
+      "customer_type": "VIP",
+      "address": "No.7 Street G, District 7, Ho Chi Minh City"
+    },
+    {
+      "id": "8",
+      "name": "Le Thi H",
+      "date_of_birth": "08/08/1994",
+      "gender": "Female",
+      "id_card": "741852963",
+      "phone_number": "0741852963",
+      "email": "lethih@yahoo.com",
+      "customer_type": "Regular",
+      "address": "No.8 Street H, District 8, Ho Chi Minh City"
+    },
+    {
+      "id": "9",
+      "name": "Phan Van I",
+      "date_of_birth": "09/09/1986",
+      "gender": "Male",
+      "id_card": "852741963",
+      "phone_number": "0852741963",
+      "email": "phanvani@hotmail.com",
+      "customer_type": "Regular",
+      "address": "No.9 Street I, District 9, Ho Chi Minh City"
+    },
+    {
+      "id": "10",
+      "name": "Tran Thi K",
+      "date_of_birth": "10/10/1993",
+      "gender": "Female",
+      "id_card": "654321987",
+      "phone_number": "0654321987",
+      "email": "tranthik@gmail.com",
+      "customer_type": "VIP",
+      "address": "No.10 Street K, District 10, Ho Chi Minh City"
+    }
+  ],
+
+ 
+
+
+  "services": [
+    {
+      "Name": "Villa A",
+      "Acreage": "200",
+      "Costs": "1000000",
+      "MaxPeople": "8",
+      "Type": "Villa",
+      "Standard": "Luxury",
+      "Description": "A luxury villa with 4 bedrooms and private pool",
+      "Pool": "Yes",
+      "Floor": "2",
+      "Free": "Yes"
+    },
+    {
+      "Name": "Villa B",
+      "Acreage": "150",
+      "Costs": "800000",
+      "MaxPeople": "6",
+      "Type": "Villa",
+      "Standard": "Deluxe",
+      "Description": "A deluxe villa with 3 bedrooms and private garden",
+      "Pool": "No",
+      "Floor": "1",
+      "Free": "Yes"
+    },
+    {
+      "Name": "Apartment A",
+      "Acreage": "50",
+      "Costs": "500000",
+      "MaxPeople": "2",
+      "Type": "Apartment",
+      "Standard": "Standard",
+      "Description": "A standard apartment with 1 bedroom and balcony",
+      "Pool": "No",
+      "Floor": "3",
+      "Free": "No"
+    },
+    {
+      "Name": "Apartment B",
+      "Acreage": "70",
+      "Costs": "700000",
+      "MaxPeople": "4",
+      "Type": "Apartment",
+      "Standard": "Superior",
+      "Description": "A superior apartment with 2 bedrooms and sea view",
+      "Pool": "No",
+      "Floor": "4",
+      "Free": "Yes"
+    },
+    {
+      "Name": "Room A",
+      "Acreage": "20",
+      "Costs": "200000",
+      "MaxPeople": "1",
+      "Type": "Room",
+      "Standard": "Economy",
+      "Description": "An economy room with single bed",
+      "Pool": "No",
+      "Floor": "5",
+      "Free": "No"
+    },
+    {
+      "Name": "Room B",
+      "Acreage": "25",
+      "Costs": "250000",
+      "MaxPeople": "2",
+      "Type": "Room",
+      "Standard": "Standard",
+      "Description": "A standard room with double bed",
+      "Pool": "No",
+      "Floor": "6",
+      "Free": "Yes"
+    },
+    {
+      "Name": "Room C",
+      "Acreage": "30",
+      "Costs": "300000",
+      "MaxPeople": "2",
+      "Type": "Room",
+      "Standard": "Superior",
+      "Description": "A superior room with double bed and sea view",
+      "Pool": "No",
+      "Floor": "7",
+      "Free": "No"
+    },
+    {
+      "Name": "Room D",
+      "Acreage": "35",
+      "Costs": "350000",
+      "MaxPeople": "2",
+      "Type": "Room",
+      "Standard": "Deluxe",
+      "Description": "A deluxe room with double bed, sea view and balcony",
+      "Pool": "No",
+      "Floor": "8",
+      "Free": "Yes"
+    },
+    {
+      "Name": "Room E",
+      "Acreage": "40",
+      "Costs": "400000",
+      "MaxPeople": "2",
+      "Type": "Room",
+      "Standard": "Luxury",
+      "Description": "A luxury room with double bed, sea view, balcony and bathtub",
+      "Pool": "No",
+      "Floor": "9",
+      "Free": "No"
+    },
+    {
+      "Name": "Room F",
+      "Acreage": "45",
+      "Costs": "450000",
+      "MaxPeople": "2",
+      "Type": "Room",
+      "Standard": "Luxury",
+      "Description": "A luxury room with double bed, sea view, balcony and jacuzzi",
+      "Pool": "No",
+      "Floor": "10",
+      "Free": "Yes"
+    }
+  ]
+}
