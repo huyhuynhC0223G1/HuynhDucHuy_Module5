@@ -1,47 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Field, Form, Formik } from "formik";
+import { getListCustomer, deleteCustomerById } from "../service/CustomerService";
 
 export default function Customer() {
+    const [customerList, setCustomerList] = useState([]);
+    const [customer, setCustomer] = useState("");
+    const [deleteService, setDeleteService] = useState(null);
+  
+    const getCustomer = async () => {
+      const data = await getListCustomer();
+      setCustomerList(data);
+    }
+  
+    useEffect(() => {
+      getCustomer();
+    }, [customer])
+
     return (
-<Formik>
+
         <div>
             <div style={{ background: '#1a1814', height: '1000px' }}>
-                <header id="header" className=" d-flex align-items-center">
-                    <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-                        <h1 className="logo me-auto me-lg-0"><a href="index.html">FURAMA</a></h1>
-                        {/* Uncomment below if you prefer to use an image logo */}
-                        {/* <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>*/}
-                        <nav id="navbar" className="navbar order-last order-lg-0">
-                            <ul>
-                                <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
-                                <li><a className="nav-link scrollto" href="#about">About</a></li>
-                                <li><a className="nav-link scrollto" href="#menu">Menu</a></li>
-                                <li><a className="nav-link scrollto" href="#specials">Specials</a></li>
-                                <li><a className="nav-link scrollto" href="#events">Events</a></li>
-                                <li><a className="nav-link scrollto" href="#chefs">Chefs</a></li>
-                                <li><a className="nav-link scrollto" href="#gallery">Gallery</a></li>
-                                <li className="dropdown"><a href="#"><span>Service</span> <i className="bi bi-chevron-down" /></a>
-                                    <ul>
-                                        <li><a href="#">Drop Down 1</a></li>
-                                        <li className="dropdown"><a href="#"><span>Accompanied service</span> <i className="bi bi-chevron-right" /></a>
-                                            <ul>
-                                                <li><a href="#">Pool</a></li>
-                                                <li><a href="#">Car rental</a></li>
-                                                <li><a href="#">Cuisine</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Room</a></li>
-                                        <li><a href="#">Villa</a></li>
-                                    </ul>
-                                </li>
-                                <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
-                            </ul>
-                            <i className="bi bi-list mobile-nav-toggle" />
-                        </nav>{/* .navbar */}
-                        <a href="#book-a-table" className="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
-                    </div>
-                </header>
+            
                 <div className="container-lg">
                     <div className="table-responsive">
                         <div className="table-wrapper">
@@ -70,7 +49,7 @@ export default function Customer() {
                                         <th>Name</th>
                                         <th>Birthday</th>
                                         <th style={{ width: '6%' }}>Gender</th>
-                                        <th>ID Number</th>
+                                        <th>ID Card</th>
                                         <th>Phone Number</th>
                                         <th style={{ width: '15%' }}>Email</th>
                                         <th>Guest type</th>
@@ -79,82 +58,23 @@ export default function Customer() {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Huynh</td>
-                                        <td>25-02-1991</td>
-                                        <td>Nam</td>
-                                        <td>123456789</td>
-                                        <td>0369852147</td>
-                                        <td>huynh@gmail.com</td>
-                                        <td>Diamond</td>
-                                        {/*                        Diamond, Platinium, Gold, Silver, Member*/}
-                                        <td>Gia Lai</td>
-                                        <td>
+                                    {customerList.map((customer) =>(
+                                        <tr key={customer.id}>
+                                            <td>{customer.Name}</td>
+                                            <td>{customer.Birthday}</td>
+                                            <td>{customer.Gender}</td>
+                                            <td>{customer.Id_card}</td>
+                                            <td>{customer.Phone_number}</td>
+                                            <td>{customer.Email}</td>
+                                            <td>{customer.Customer_type}</td>
+                                            <td>{customer.Address}</td>
+                                            <td>
                                             <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
                                             <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Huynh</td>
-                                        <td>25-02-1991</td>
-                                        <td>Nam</td>
-                                        <td>123456789</td>
-                                        <td>0369852147</td>
-                                        <td>huynh@gmail.com</td>
-                                        <td>Diamond</td>
-                                        <td>Gia Lai</td>
-                                        <td>
-                                            <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
-                                            <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Huynh</td>
-                                        <td>25-02-1991</td>
-                                        <td>Nam</td>
-                                        <td>123456789</td>
-                                        <td>0369852147</td>
-                                        <td>huynh@gmail.com</td>
-                                        <td>Diamond</td>
-                                        <td>Gia Lai</td>
-                                        <td>
-                                            <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
-                                            <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Huynh</td>
-                                        <td>25-02-1991</td>
-                                        <td>Nam</td>
-                                        <td>123456789</td>
-                                        <td>0369852147</td>
-                                        <td>huynh@gmail.com</td>
-                                        <td>Diamond</td>
-                                        <td>Gia Lai</td>
-                                        <td>
-                                            <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
-                                            <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Huynh</td>
-                                        <td>25-02-1991</td>
-                                        <td>Nam</td>
-                                        <td>123456789</td>
-                                        <td>0369852147</td>
-                                        <td>huynh@gmail.com</td>
-                                        <td>Diamond</td>
-                                        <td>Gia Lai</td>
-                                        <td>
-                                            <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
-                                            <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
-                                        </td>
-                                    </tr>
+                                        </tr>
+                                    ))}
+                                    
                                 </tbody>
                             </table>
                             <div className="clearfix">
@@ -317,6 +237,6 @@ export default function Customer() {
                 </div>
             </div>
         </div>
-        </Formik>
+        
     );
 }

@@ -12,6 +12,8 @@ function Header(){
               <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
               <li><a className="nav-link scrollto" href="#about">About</a></li>
               <li><Link to="/Service"><a className="nav-link scrollto" href="#menu">Service</a></Link></li>
+              <li><Link to="/Customer"><a className="nav-link scrollto" href="#menu">Customer</a></Link></li>
+              <li><Link to="/Contract"><a className="nav-link scrollto" href="#menu">Contract</a></Link></li>
               <li><a className="nav-link scrollto" href="#specials">Specials</a></li>
               <li><a className="nav-link scrollto" href="#events">Events</a></li>
               <li><a className="nav-link scrollto" href="#chefs">Chefs</a></li>

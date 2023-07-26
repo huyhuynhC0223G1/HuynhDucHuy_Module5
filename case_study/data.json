@@ -2,113 +2,113 @@
   "customers": [
     {
       "id": "1",
-      "name": "Nguyen Van A",
-      "date_of_birth": "01/01/1990",
-      "gender": "Male",
-      "id_card": "123456789",
-      "phone_number": "0123456789",
-      "email": "nguyenvana@gmail.com",
-      "customer_type": "Regular",
-      "address": "No.1 Street A, District 1, Ho Chi Minh City"
+      "Name": "Nguyen Van A",
+      "Birthday": "01/01/1990",
+      "Gender": "Male",
+      "Id_card": "123456789",
+      "Phone_number": "0123456789",
+      "Email": "nguyenvana@gmail.com",
+      "Customer_type": "Regular",
+      "Address": "No.1 Street A, District 1, Ho Chi Minh City"
     },
     {
       "id": "2",
-      "name": "Tran Thi B",
-      "date_of_birth": "02/02/1995",
-      "gender": "Female",
-      "id_card": "987654321",
-      "phone_number": "0987654321",
-      "email": "tranthib@yahoo.com",
-      "customer_type": "Regular",
-      "address": "No.2 Street B, District 2, Ho Chi Minh City"
+      "Name": "Tran Thi B",
+      "Birthday": "02/02/1995",
+      "Gender": "Female",
+      "Id_card": "987654321",
+      "Phone_number": "0987654321",
+      "Email": "tranthib@yahoo.com",
+      "Customer_type": "Regular",
+      "Address": "No.2 Street B, District 2, Ho Chi Minh City"
     },
     {
       "id": "3",
-      "name": "Le Minh C",
-      "date_of_birth": "03/03/1985",
-      "gender": "Male",
-      "id_card": "456789123",
-      "phone_number": "0567891234",
-      "email": "leminhc@hotmail.com",
-      "customer_type": "VIP",
-      "address": "No.3 Street C, District 3, Ho Chi Minh City"
+      "Name": "Le Minh C",
+      "Birthday": "03/03/1985",
+      "Gender": "Male",
+      "Id_card": "456789123",
+      "Phone_number": "0567891234",
+      "Email": "leminhc@hotmail.com",
+      "Customer_type": "VIP",
+      "Address": "No.3 Street C, District 3, Ho Chi Minh City"
     },
     {
       "id": "4",
-      "name": "Pham Thi D",
-      "date_of_birth": "04/04/1992",
-      "gender": "Female",
-      "id_card": "369852147",
-      "phone_number": "0369852147",
-      "email": "phamthid@gmail.com",
-      "customer_type": "Regular",
-      "address": "No.4 Street D, District 4, Ho Chi Minh City"
+      "Name": "Pham Thi D",
+      "Birthday": "04/04/1992",
+      "Gender": "Female",
+      "Id_card": "369852147",
+      "Phone_number": "0369852147",
+      "Email": "phamthid@gmail.com",
+      "Customer_type": "Regular",
+      "Address": "No.4 Street D, District 4, Ho Chi Minh City"
     },
     {
       "id": "5",
-      "name": "Hoang Van E",
-      "date_of_birth": "05/05/1988",
-      "gender": "Male",
-      "id_card": "258147369",
-      "phone_number": "0258147369",
-      "email": "hoangvane@yahoo.com",
-      "customer_type": "VIP",
-      "address": "No.5 Street E, District 5, Ho Chi Minh City"
+      "Name": "Hoang Van E",
+      "Birthday": "05/05/1988",
+      "Gender": "Male",
+      "Id_card": "258147369",
+      "Phone_number": "0258147369",
+      "Email": "hoangvane@yahoo.com",
+      "Customer_type": "VIP",
+      "Address": "No.5 Street E, District 5, Ho Chi Minh City"
     },
     {
       "id": "6",
-      "name": "Nguyen Thi F",
-      "date_of_birth": "06/06/1991",
-      "gender": "Female",
-      "id_card": "147258369",
+      "Name": "Nguyen Thi F",
+      "Birthday": "06/06/1991",
+      "Gender": "Female",
+      "Id_card": "147258369",
       "phone_number": "0147258369",
-      "email": "nguyenthif@hotmail.com",
-      "customer_type": "Regular",
-      "address": "No.6 Street F, District 6, Ho Chi Minh City"
+      "Email": "nguyenthif@hotmail.com",
+      "Customer_type": "Regular",
+      "Address": "No.6 Street F, District 6, Ho Chi Minh City"
     },
     {
       "id": "7",
-      "name": "Tran Van G",
-      "date_of_birth": "07/07/1987",
-      "gender": "Male",
-      "id_card": "963852741",
-      "phone_number": "0963852741",
-      "email": "tranvang@gmail.com",
-      "customer_type": "VIP",
-      "address": "No.7 Street G, District 7, Ho Chi Minh City"
+      "Name": "Tran Van G",
+      "Birthday": "07/07/1987",
+      "Gender": "Male",
+      "Id_card": "963852741",
+      "Phone_number": "0963852741",
+      "Email": "tranvang@gmail.com",
+      "Customer_type": "VIP",
+      "Address": "No.7 Street G, District 7, Ho Chi Minh City"
     },
     {
       "id": "8",
-      "name": "Le Thi H",
-      "date_of_birth": "08/08/1994",
-      "gender": "Female",
-      "id_card": "741852963",
-      "phone_number": "0741852963",
-      "email": "lethih@yahoo.com",
-      "customer_type": "Regular",
-      "address": "No.8 Street H, District 8, Ho Chi Minh City"
+      "Name": "Le Thi H",
+      "Birthday": "08/08/1994",
+      "Gender": "Female",
+      "Id_card": "741852963",
+      "Phone_number": "0741852963",
+      "Email": "lethih@yahoo.com",
+      "Customer_type": "Regular",
+      "Address": "No.8 Street H, District 8, Ho Chi Minh City"
     },
     {
       "id": "9",
-      "name": "Phan Van I",
-      "date_of_birth": "09/09/1986",
-      "gender": "Male",
-      "id_card": "852741963",
-      "phone_number": "0852741963",
-      "email": "phanvani@hotmail.com",
-      "customer_type": "Regular",
-      "address": "No.9 Street I, District 9, Ho Chi Minh City"
+      "Name": "Phan Van I",
+      "Birthday": "09/09/1986",
+      "Gender": "Male",
+      "Id_card": "852741963",
+      "Phone_number": "0852741963",
+      "Email": "phanvani@hotmail.com",
+      "Customer_type": "Regular",
+      "Address": "No.9 Street I, District 9, Ho Chi Minh City"
     },
     {
       "id": "10",
-      "name": "Tran Thi K",
-      "date_of_birth": "10/10/1993",
-      "gender": "Female",
-      "id_card": "654321987",
-      "phone_number": "0654321987",
-      "email": "tranthik@gmail.com",
-      "customer_type": "VIP",
-      "address": "No.10 Street K, District 10, Ho Chi Minh City"
+      "Name": "Tran Thi K",
+      "Birthday": "10/10/1993",
+      "Gender": "Female",
+      "Id_card": "654321987",
+      "Phone_number": "0654321987",
+      "Email": "tranthik@gmail.com",
+      "Customer_type": "VIP",
+      "Address": "No.10 Street K, District 10, Ho Chi Minh City"
     }
   ],
 
@@ -235,6 +235,64 @@
       "Pool": "No",
       "Floor": "10",
       "Free": "Yes"
+    }
+  ],
+  
+    "contracts":[
+    {
+      "id":1,
+      "Contract_Number": "HD001",
+      "Name_Customer": "Nguyen Van A",
+      "Name_Employee": "Nguyen Van B",
+      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
+    },
+    {
+      "id":2,
+      "Contract_Number": "HD001",
+      "Name_Customer": "Nguyen Van A",
+      "Name_Employee": "Nguyen Van B",
+      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
+    },
+    {
+      "id":3,
+      "Contract_Number": "HD001",
+      "Name_Customer": "Nguyen Van A",
+      "Name_Employee": "Nguyen Van B",
+      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
+    },
+    {
+      "id":4,
+      "Contract_Number": "HD001",
+      "Name_Customer": "Nguyen Van A",
+      "Name_Employee": "Nguyen Van B",
+      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
+    },
+    {
+      "id":5,
+      "Contract_Number": "HD001",
+      "Name_Customer": "Nguyen Van A",
+      "Name_Employee": "Nguyen Van B",
+      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
     }
   ]
 }
