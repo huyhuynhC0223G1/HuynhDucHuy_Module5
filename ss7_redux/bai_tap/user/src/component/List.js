@@ -18,8 +18,8 @@ export default function ListUsers() {
         getListUser().then(data => setUsers(data));
     }, [user]);
 
-    const handleDeleteUser = async (e) => {
-        e.preventDefault();
+    const handleDeleteUser = async () => {
+    
         await deleteUser(deleteUserId);
         setUsers(users.filter(user => user.id !== deleteUserId));
         setDeleteUserId(null);
