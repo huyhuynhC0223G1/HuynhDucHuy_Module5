@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
+import { getCovids } from "./service/CovidService";
 
 export default function Home({ covids }) {
   return (
@@ -34,11 +35,10 @@ export default function Home({ covids }) {
 };
 
 export async function getStaticProps() {
-  const res = await axios.get("http://localhost:8080/covids")
-  const covids = res.data
+  const covids = await getCovids();
   return {
     props: {
-      covids: covids
+      covids
     }
   };
 }

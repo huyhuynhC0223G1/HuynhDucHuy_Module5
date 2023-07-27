@@ -2,7 +2,7 @@
   "customers": [
     {
       "id": "1",
-      "Name": "Nguyen Van A",
+      "Name_Customer": "Nguyen Van A",
       "Birthday": "01/01/1990",
       "Gender": "Male",
       "Id_card": "123456789",
@@ -13,7 +13,7 @@
     },
     {
       "id": "2",
-      "Name": "Tran Thi B",
+      "Name_Customer": "Tran Thi B",
       "Birthday": "02/02/1995",
       "Gender": "Female",
       "Id_card": "987654321",
@@ -24,7 +24,7 @@
     },
     {
       "id": "3",
-      "Name": "Le Minh C",
+      "Name_Customer": "Le Minh C",
       "Birthday": "03/03/1985",
       "Gender": "Male",
       "Id_card": "456789123",
@@ -35,7 +35,7 @@
     },
     {
       "id": "4",
-      "Name": "Pham Thi D",
+      "Name_Customer": "Pham Thi D",
       "Birthday": "04/04/1992",
       "Gender": "Female",
       "Id_card": "369852147",
@@ -46,7 +46,7 @@
     },
     {
       "id": "5",
-      "Name": "Hoang Van E",
+      "Name_Customer": "Hoang Van E",
       "Birthday": "05/05/1988",
       "Gender": "Male",
       "Id_card": "258147369",
@@ -57,7 +57,7 @@
     },
     {
       "id": "6",
-      "Name": "Nguyen Thi F",
+      "Name_Customer": "Nguyen Thi F",
       "Birthday": "06/06/1991",
       "Gender": "Female",
       "Id_card": "147258369",
@@ -68,7 +68,7 @@
     },
     {
       "id": "7",
-      "Name": "Tran Van G",
+      "Name_Customer": "Tran Van G",
       "Birthday": "07/07/1987",
       "Gender": "Male",
       "Id_card": "963852741",
@@ -79,7 +79,7 @@
     },
     {
       "id": "8",
-      "Name": "Le Thi H",
+      "Name_Customer": "Le Thi H",
       "Birthday": "08/08/1994",
       "Gender": "Female",
       "Id_card": "741852963",
@@ -90,7 +90,7 @@
     },
     {
       "id": "9",
-      "Name": "Phan Van I",
+      "Name_Customer": "Phan Van I",
       "Birthday": "09/09/1986",
       "Gender": "Male",
       "Id_card": "852741963",
@@ -101,7 +101,7 @@
     },
     {
       "id": "10",
-      "Name": "Tran Thi K",
+      "Name_Customer": "Tran Thi K",
       "Birthday": "10/10/1993",
       "Gender": "Female",
       "Id_card": "654321987",
@@ -111,29 +111,29 @@
       "Address": "No.10 Street K, District 10, Ho Chi Minh City"
     }
   ],
-
- 
-
-
   "services": [
     {
-      "Name": "Villa A",
+      "id": 1,
+      "Name_Service": "Villa A",
       "Acreage": "200",
       "Costs": "1000000",
       "MaxPeople": "8",
-      "Type": "Villa",
+      "Type_Service": "Villa",
       "Standard": "Luxury",
       "Description": "A luxury villa with 4 bedrooms and private pool",
+      
       "Pool": "Yes",
       "Floor": "2",
       "Free": "Yes"
+      
     },
     {
-      "Name": "Villa B",
+      "id": 2,
+      "Name_Service": "Villa B",
       "Acreage": "150",
       "Costs": "800000",
       "MaxPeople": "6",
-      "Type": "Villa",
+      "Type_Service": "Villa",
       "Standard": "Deluxe",
       "Description": "A deluxe villa with 3 bedrooms and private garden",
       "Pool": "No",
@@ -141,11 +141,12 @@
       "Free": "Yes"
     },
     {
-      "Name": "Apartment A",
+      "id": 3,
+      "Name_Service": "Apartment A",
       "Acreage": "50",
       "Costs": "500000",
       "MaxPeople": "2",
-      "Type": "Apartment",
+      "Type_Service": "Apartment",
       "Standard": "Standard",
       "Description": "A standard apartment with 1 bedroom and balcony",
       "Pool": "No",
@@ -153,11 +154,12 @@
       "Free": "No"
     },
     {
-      "Name": "Apartment B",
+      "id": 4,
+      "Name_Service": "Apartment B",
       "Acreage": "70",
       "Costs": "700000",
       "MaxPeople": "4",
-      "Type": "Apartment",
+      "Type_Service": "Apartment",
       "Standard": "Superior",
       "Description": "A superior apartment with 2 bedrooms and sea view",
       "Pool": "No",
@@ -165,11 +167,12 @@
       "Free": "Yes"
     },
     {
-      "Name": "Room A",
+      "id": 5,
+      "Name_Service": "Room A",
       "Acreage": "20",
       "Costs": "200000",
       "MaxPeople": "1",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Economy",
       "Description": "An economy room with single bed",
       "Pool": "No",
@@ -177,11 +180,12 @@
       "Free": "No"
     },
     {
-      "Name": "Room B",
+      "id": 6,
+      "Name_Service": "Room B",
       "Acreage": "25",
       "Costs": "250000",
       "MaxPeople": "2",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Standard",
       "Description": "A standard room with double bed",
       "Pool": "No",
@@ -189,11 +193,12 @@
       "Free": "Yes"
     },
     {
-      "Name": "Room C",
+      "id": 7,
+      "Name_Service": "Room C",
       "Acreage": "30",
       "Costs": "300000",
       "MaxPeople": "2",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Superior",
       "Description": "A superior room with double bed and sea view",
       "Pool": "No",
@@ -201,11 +206,12 @@
       "Free": "No"
     },
     {
-      "Name": "Room D",
+      "id": 8,
+      "Name_Service": "Room D",
       "Acreage": "35",
       "Costs": "350000",
       "MaxPeople": "2",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Deluxe",
       "Description": "A deluxe room with double bed, sea view and balcony",
       "Pool": "No",
@@ -213,11 +219,12 @@
       "Free": "Yes"
     },
     {
-      "Name": "Room E",
+      "id": 9,
+      "Name_Service": "Room E",
       "Acreage": "40",
       "Costs": "400000",
       "MaxPeople": "2",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Luxury",
       "Description": "A luxury room with double bed, sea view, balcony and bathtub",
       "Pool": "No",
@@ -225,11 +232,12 @@
       "Free": "No"
     },
     {
-      "Name": "Room F",
+      "id": 10,
+      "Name_Service": "Room F",
       "Acreage": "45",
       "Costs": "450000",
       "MaxPeople": "2",
-      "Type": "Room",
+      "Type_Service": "Room",
       "Standard": "Luxury",
       "Description": "A luxury room with double bed, sea view, balcony and jacuzzi",
       "Pool": "No",
@@ -237,58 +245,110 @@
       "Free": "Yes"
     }
   ],
-  
-    "contracts":[
+  "contracts": [
     {
-      "id":1,
+      "id": 1,
       "Contract_Number": "HD001",
-      "Name_Customer": "Nguyen Van A",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
       "Name_Employee": "Nguyen Van B",
-      "Type_Service": "Villa",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",
       "Total_Payment": "2200$"
     },
     {
-      "id":2,
-      "Contract_Number": "HD001",
-      "Name_Customer": "Nguyen Van A",
+      "id": 2,
+      "Contract_Number": "HD002",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
       "Name_Employee": "Nguyen Van B",
-      "Type_Service": "Villa",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",
       "Total_Payment": "2200$"
     },
     {
-      "id":3,
-      "Contract_Number": "HD001",
-      "Name_Customer": "Nguyen Van A",
+      "id": 3,
+      "Contract_Number": "HD003",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
       "Name_Employee": "Nguyen Van B",
-      "Type_Service": "Villa",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",
       "Total_Payment": "2200$"
     },
     {
-      "id":4,
-      "Contract_Number": "HD001",
-      "Name_Customer": "Nguyen Van A",
+      "id": 4,
+      "Contract_Number": "HD004",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
       "Name_Employee": "Nguyen Van B",
-      "Type_Service": "Villa",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",
       "Total_Payment": "2200$"
     },
     {
-      "id":5,
-      "Contract_Number": "HD001",
-      "Name_Customer": "Nguyen Van A",
+      "id": 5,
+      "Contract_Number": "HD005",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
       "Name_Employee": "Nguyen Van B",
-      "Type_Service": "Villa",
+      "Start_Date": "22/02/2023",
+      "End_Date": "28/02/2023",
+      "Deposit": "500$",
+      "Total_Payment": "2200$"
+    },
+    {
+      "id": 6,
+      "Contract_Number": "HD006",
+      "Customer": {
+        "id": 1,
+        "Name_Customer": "Nguyen Van A"
+      },
+      "Service": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Type_Service": "Villa"
+      },
+      "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",

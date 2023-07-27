@@ -22,18 +22,18 @@ function Service() {
   // }
 
   return (
-    <div>
+    <div> 
       <div style={{ background: '#1a1814', height: '1000px' }}>
 
-        <div className="container-lg">
+        <div className="container-fluid">
           <div className="table-responsive">
             <div className="table-wrapper">
-              <div className="table-title" style={{ background: '#3a2918' }}>
+              <div className="table-title" >
                 <div className="row">
-                  <div className="col-sm-2">
+                  <div className="col-sm-3">
                     <h2>LIST SERVICE</h2>
                   </div>
-                  <div className="col-sm-7">
+                  <div className="col-sm-6">
                     <a href="#addEmployeeModal" className="btn" style={{ background: '#cda45e' }} data-toggle="modal"><span>Add New Sevice</span></a>
                   </div>
                   <div className="col-sm-3">
@@ -47,7 +47,7 @@ function Service() {
                 </div>
               </div>
               <table className="table table-striped">
-                <thead>
+                <thead className="table-dark">
                   <tr>
                     <th>#</th>
                     <th>Name</th>
@@ -65,12 +65,14 @@ function Service() {
                 </thead>
                 <tbody>
                   {serviceList.map((service) => (
-                    <tr key={service.Name}>
+                    <tr key={service.id}>
+                      <td>{service.id}</td>
+                      <td>{service.Name_Service}</td>
                       <td>{service.Acreage}</td>
                       <td>{service.Costs}</td>
                       <td>{service.MaxPeople}</td>
-                      <td>{service.Type}</td>
-                      <td>{service.Standard}$</td>
+                      <td>{service.Type_Service}</td>
+                      <td>{service.Standard}</td>
                       <td>{service.Description}</td>
                       <td>{service.Pool}</td>
                       <td>{service.Floor}</td>

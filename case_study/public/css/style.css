@@ -170,8 +170,8 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: rgba(12, 11, 9, 0.6);
-  border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+  background: rgba(16, 16, 38, 0.6);
+  border-bottom: 1px solid rgba(120, 120, 136, 0.6);
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;

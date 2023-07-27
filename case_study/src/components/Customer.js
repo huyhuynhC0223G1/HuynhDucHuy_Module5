@@ -20,11 +20,10 @@ export default function Customer() {
 
         <div>
             <div style={{ background: '#1a1814', height: '1000px' }}>
-            
-                <div className="container-lg">
+                <div className="container-fluid">
                     <div className="table-responsive">
                         <div className="table-wrapper">
-                            <div className="table-title" style={{ background: '#575041' }}>
+                            <div className="table-title">
                                 <div className="row">
                                     <div className="col-sm-3">
                                         <h2>LIST CUSTOMER</h2>
@@ -42,8 +41,8 @@ export default function Customer() {
                                     </div>
                                 </div>
                             </div>
-                            <table className="table table-striped">
-                                <thead>
+                            <table className="table table-striped table-bordered">
+                                <thead className="table-dark">
                                     <tr>
                                         <th>#</th>
                                         <th>Name</th>
@@ -54,13 +53,15 @@ export default function Customer() {
                                         <th style={{ width: '15%' }}>Email</th>
                                         <th>Guest type</th>
                                         <th>Address</th>
-                                        <th>Actions</th>
+                                        <th>EDIT</th>
+                                        <th>DELETE</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {customerList.map((customer) =>(
                                         <tr key={customer.id}>
-                                            <td>{customer.Name}</td>
+                                            <td>{customer.id}</td>
+                                            <td>{customer.Name_Customer}</td>
                                             <td>{customer.Birthday}</td>
                                             <td>{customer.Gender}</td>
                                             <td>{customer.Id_card}</td>
@@ -68,8 +69,10 @@ export default function Customer() {
                                             <td>{customer.Email}</td>
                                             <td>{customer.Customer_type}</td>
                                             <td>{customer.Address}</td>
-                                            <td>
+                                            <td style={{textAlign: 'center'}}>
                                             <a href="#editCustomerModal" className="edit" title="Edit" data-toggle="modal"><i className="material-icons"></i></a>
+                                            </td>
+                                            <td style={{textAlign: 'center'}}>
                                             <a href="#deleteCustomerModal" className="delete" title="Delete" data-toggle="modal"><i className="material-icons"></i></a>
                                         </td>
                                         </tr>
