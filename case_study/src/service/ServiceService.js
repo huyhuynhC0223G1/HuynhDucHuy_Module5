@@ -10,3 +10,7 @@ export async function deleteServiceById(id){
     const resolve = await axios.delete("/services" + id)
     return resolve.data;
 }
+export async function createService(){
+    const resolve = await axios.post("/services")
+    return resolve.data;
+}

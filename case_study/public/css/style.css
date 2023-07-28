@@ -1172,7 +1172,9 @@ section {
 .book-a-table .php-email-form .error-message br+br {
   margin-top: 25px;
 }
-
+.text-red{
+  color: red;
+}
 .book-a-table .php-email-form .sent-message {
   display: none;
   color: #fff;

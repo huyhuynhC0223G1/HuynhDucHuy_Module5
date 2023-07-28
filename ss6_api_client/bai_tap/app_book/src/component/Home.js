@@ -24,7 +24,7 @@ function Home() {
         await deleteBook(deleteBookId);
         setListBook(listBook.filter(book => book.id !== deleteBookId));
         setDeleteBookId(null);
-
+        
     };
 
     return (

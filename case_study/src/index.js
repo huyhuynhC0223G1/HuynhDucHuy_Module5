@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Rou, Routes } from 'react-router-dom';
 import Contract from './components/Contract';
 import Customer from './components/Customer';
 import Service from './components/Service';
-import Header from './components/Header';
+import Header from './components/HeaderFurama';
 import Footer from './components/Footer';
 import Body from './components/Body';
 
@@ -17,7 +17,9 @@ root.render(
     <BrowserRouter>
     <Header />
     <Routes>
+
       <Route path='/' element={<App />}></Route>
+      <Route path='/body' element={<Body />}></Route>
       <Route path='/Service' element={<Service />}></Route>
       <Route path='/Contract' element={<Contract />}></Route>
       <Route path='/Customer' element={<Customer />}></Route>

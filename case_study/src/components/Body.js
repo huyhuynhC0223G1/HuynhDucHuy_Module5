@@ -1,6 +1,20 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
+import { getListService } from "../service/ServiceService";
 
 function Body(){
+  const [serviceList, setServiceList] = useState([]);
+  const [service, setService] = useState("");
+
+  const getService = async () => {
+    const data = await getListService();
+    setServiceList(data);
+  }
+
+  useEffect(() => {
+    getService();
+  }, [service])
+
     return(
         <div>
         <section id="hero" className="d-flex align-items-center">
@@ -49,9 +63,9 @@ function Body(){
                 </div>
               </div>
             </div>
-          </section>{/* End About Section */}
+          </section>End About Section
           {/* ======= Why Us Section ======= */}
-          <section id="why-us" className="why-us">
+          {/* <section id="why-us" className="why-us">
             <div className="container" data-aos="fade-up">
               <div className="section-title">
                 <h2>Why Us</h2>
@@ -81,107 +95,40 @@ function Body(){
                 </div>
               </div>
             </div>
-          </section>{/* End Why Us Section */}
+          </section>End Why Us Section */}
           {/* ======= Menu Section ======= */}
           <section id="menu" className="menu section-bg">
             <div className="container" data-aos="fade-up">
               <div className="section-title">
-                <h2>Menu</h2>
-                <p>Check Our Tasty Menu</p>
+                <h2>Service</h2>
+                <p>Check out our service</p>
               </div>
-              <div className="row" data-aos="fade-up" data-aos-delay={100}>
-                <div className="col-lg-12 d-flex justify-content-center">
-                  <ul id="menu-flters">
-                    <li data-filter="*" className="filter-active">All</li>
-                    <li data-filter=".filter-starters">Starters</li>
-                    <li data-filter=".filter-salads">Salads</li>
-                    <li data-filter=".filter-specialty">Specialty</li>
-                  </ul>
-                </div>
+              <div class="card-group">
+                {serviceList.map((service) => {
+                  return (
+                    <div class="card mb-3 ml-1 " style={{ minWidth: '530px', background:'#1a1814', color:'white'}} data-aos="zoom-in" data-aos-delay={100}>
+                      <div class="row g-0">
+                        <div class="col-md-7">
+                          <img src={service.image} class="img-fluid rounded-start" alt="..." style={{ height: '100%', width: '100%' }} />
+                        </div>
+                        <div class="col-md-5">
+                          <div class="card-body">
+                            <h5 class="card-title">Name Service: {service.Name_Service}</h5>
+                            <p class="card-text">Acreage: {service.Acreage}m2</p>
+                            {/* <p class="card-text">{service.Costs}</p> */}
+                            {/* <p class="card-text">{service.MaxPeople}</p> */}
+                            <p class="card-text">Type Service: {service.Type_Service}</p>
+                            {/* <p class="card-text">{service.Standard}</p> */}
+                            <p class="card-text">Description: {service.Description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
-              <div className="row menu-container" data-aos="fade-up" data-aos-delay={200}>
-                <div className="col-lg-6 menu-item filter-starters">
-                  <img src="assets/img/menu/lobster-bisque.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Lobster Bisque</a><span>$5.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Lorem, deren, trataro, filede, nerada
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-specialty">
-                  <img src="assets/img/menu/bread-barrel.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Bread Barrel</a><span>$6.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Lorem, deren, trataro, filede, nerada
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-starters">
-                  <img src="assets/img/menu/cake.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Crab Cake</a><span>$7.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    A delicate crab cake served on a toasted roll with lettuce and tartar sauce
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-salads">
-                  <img src="assets/img/menu/caesar.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Caesar Selections</a><span>$8.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Lorem, deren, trataro, filede, nerada
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-specialty">
-                  <img src="assets/img/menu/tuscan-grilled.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Tuscan Grilled</a><span>$9.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Grilled chicken with provolone, artichoke hearts, and roasted red pesto
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-starters">
-                  <img src="assets/img/menu/mozzarella.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Mozzarella Stick</a><span>$4.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Lorem, deren, trataro, filede, nerada
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-salads">
-                  <img src="assets/img/menu/greek-salad.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Greek Salad</a><span>$9.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-salads">
-                  <img src="assets/img/menu/spinach-salad.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Spinach Salad</a><span>$9.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
-                  </div>
-                </div>
-                <div className="col-lg-6 menu-item filter-specialty">
-                  <img src="assets/img/menu/lobster-roll.jpg" className="menu-img" alt="" />
-                  <div className="menu-content">
-                    <a href="#">Lobster Roll</a><span>$12.95</span>
-                  </div>
-                  <div className="menu-ingredients">
-                    Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
-                  </div>
-                </div>
-              </div>
+
+              
             </div>
           </section>{/* End Menu Section */}
           {/* ======= Specials Section ======= */}

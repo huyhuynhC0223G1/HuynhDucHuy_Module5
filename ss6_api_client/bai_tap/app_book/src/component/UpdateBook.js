@@ -8,12 +8,12 @@ function UpdateBook() {
     const [book, setBook] = useState(null);
     const navigate= useNavigate();
 
+    const fetchBook = async () => {
+        const data = await getBookById(id);
+        setBook(data);
+        console.log(data);
+    };
     useEffect(() => {
-        const fetchBook = async () => {
-            const data = await getBookById(id);
-            setBook(data);
-            console.log(data);
-        };
         fetchBook();
     }, [id]);
 

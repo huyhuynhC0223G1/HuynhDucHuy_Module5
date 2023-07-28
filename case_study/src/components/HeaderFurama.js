@@ -5,11 +5,11 @@ function Header(){
     return(
         <header id="header" className="d-flex align-items-center">
         <div className="container-fluid  d-flex align-items-center justify-content-lg-between">
-          <p className="logo me-auto me-lg-0" style={{fontSize:"50px"}}><a href="index.html">༺ 𝔽𝕌ℝ𝔸𝕄𝔸</a></p>
+          <p className="logo me-auto me-lg-0" style={{fontSize:"50px"}}><Link to="/Body"><a href="index.html">༺ 𝔽𝕌ℝ𝔸𝕄𝔸</a></Link></p>
           <a href="index.html" className="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" className="img-fluid" /></a>
           <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
-              <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><Link to="/Body"><a className="nav-link scrollto active" href="#hero">Home</a></Link></li>
               {/* <li><a className="nav-link scrollto" href="#about">About</a></li> */}
               <li><Link to="/Service"><a className="nav-link scrollto" href="#menu">Service</a></Link></li>
               <li><Link to="/Customer"><a className="nav-link scrollto" href="#menu">Customer</a></Link></li>
