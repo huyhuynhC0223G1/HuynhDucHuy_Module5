@@ -3,6 +3,8 @@ import { getListCustomer, deleteCustomerById, createCustomer, updateCustomer, ge
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as yup from 'yup';
 import { useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2';
+
 
 export default function Customer() {
     const [customerList, setCustomerList] = useState([]);
@@ -20,8 +22,8 @@ export default function Customer() {
         const data = await getCustomerById(id);
         console.log(data);
         setCustomer(data);
-
     }
+
     useEffect(() => {
         getCustomer();
         if (id) {
@@ -32,16 +34,26 @@ export default function Customer() {
 
     const handleUpdate = async (value) => {
         await updateCustomer(id, value);
-        alert("updated successfully!");
         setCustomer("");
-        navigate("/");
+       
+        await Swal.fire({
+            icon: "success",
+            title: "Update Successful !!!",
+            timer: 2000
+        })
     }
 
     const handleDeleteCustomer = async () => {
         await deleteCustomerById(deleteCustomer)
         setCustomerList(customerList.filter(customer => customer.id !== deleteCustomer));
         setDeleteCustomer(null);
+        await Swal.fire({
+            icon: "success",
+            title: "Delete Successful !!!",
+            timer: 2000
+        })
     }
+
 
     return (
 
@@ -142,8 +154,12 @@ export default function Customer() {
 
                             onSubmit={async (value) => {
                                 await createCustomer(value);
-                                alert("Add in successfully!!!");
                                 navigate("/");
+                                await Swal.fire({
+                                    icon: "success",
+                                    title: "Create Successful !!!",
+                                    timer: 2000
+                                })
                             }}>
 
                             <Form>

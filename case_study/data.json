@@ -2,7 +2,7 @@
   "customers": [
     {
       "id": "1",
-      "Name_Customer": "Nguyen Van ZZZ",
+      "Name_Customer": "Nguyen Van Z",
       "Birthday": "01/01/1990",
       "Gender": "Male",
       "Id_card": "123456789",
@@ -118,7 +118,10 @@
       "Acreage": "200",
       "Costs": "1000000",
       "MaxPeople": "8",
-      "Type_Service": "Villa",
+      "Type_Service": {
+        "id": 1,
+        "nameTypeService": "Villa"
+      },
       "Standard": "Luxury",
       "Description": "A luxury villa with 4 bedrooms and private pool",
       "image": "https://cf.bstatic.com/xdata/images/hotel/max500/217742112.jpg?k=ef9f204032112dac98781b76cf59be8144aff1008f85c02e8e34acbbde477d71&o=&hp=1",
@@ -132,7 +135,10 @@
       "Acreage": "150",
       "Costs": "800000",
       "MaxPeople": "6",
-      "Type_Service": "Villa",
+      "Type_Service": {
+        "id": 1,
+        "nameTypeService": "Villa"
+      },
       "Standard": "Deluxe",
       "Description": "A deluxe villa with 3 bedrooms and private garden",
       "image": "https://kenhhomestay.com/wp-content/uploads/2018/09/biet-thu-villa-da-nang-9.jpg",
@@ -146,7 +152,10 @@
       "Acreage": "50",
       "Costs": "500000",
       "MaxPeople": "2",
-      "Type_Service": "Apartment",
+      "Type_Service": {
+        "id": 2,
+        "nameTypeService": "House"
+      },
       "Standard": "Standard",
       "Description": "A standard apartment with 1 bedroom and balcony",
       "image": "https://dulichtoday.vn/wp-content/uploads/2023/03/top-10-apartment-da-nang-dep-quen-loi-ve-cho-hoi-me-song-ao8.png",
@@ -160,7 +169,10 @@
       "Acreage": "70",
       "Costs": "700000",
       "MaxPeople": "4",
-      "Type_Service": "Apartment",
+      "Type_Service": {
+        "id": 2,
+        "nameTypeService": "House"
+      },
       "Standard": "Superior",
       "Description": "A superior apartment with 2 bedrooms and sea view",
       "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/281254244.jpg?k=e2ad5b3c8ae6e510fc395be3837fbfdf0859d2f037783808bfdb48af89de9b73&o=&hp=1",
@@ -174,7 +186,10 @@
       "Acreage": "20",
       "Costs": "200000",
       "MaxPeople": "1",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Economy",
       "Description": "An economy room with single bed",
       "image": "https://hips.hearstapps.com/hmg-prod/images/modern-living-room-black-white-1656377050.jpg?crop=1.00xw:0.755xh;0,0.202xh&resize=1200:*",
@@ -188,7 +203,10 @@
       "Acreage": "25",
       "Costs": "250000",
       "MaxPeople": "2",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Standard",
       "Description": "A standard room with double bed",
       "image": "https://www.thespruce.com/thmb/F8G06DGGRGsLbxiWc-UfhIicqIU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Artboard2-100-434dc8f965ef4c0ca9287bedd338ebe1.jpg",
@@ -202,7 +220,10 @@
       "Acreage": "30",
       "Costs": "300000",
       "MaxPeople": "2",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Superior",
       "Description": "A superior room with double bed and sea view",
       "image": "https://assets.architecturaldigest.in/photos/63c94f218df6b9fdb924d9b1/3:2/w_6720,h_4480,c_limit/220615-KBWID_Highland_009.jpg",
@@ -216,7 +237,10 @@
       "Acreage": "35",
       "Costs": "350000",
       "MaxPeople": "2",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Deluxe",
       "Description": "A deluxe room with double bed, sea view and balcony",
       "image": "https://www.thespruce.com/thmb/ARG9YVZh8cZxTgXhzqrfRhOHlEA=/1178x0/filters:no_upscale():max_bytes(150000):strip_icc()/YDrq5F-5b10345bfa6bcc0036abe9bd.jpg",
@@ -230,7 +254,10 @@
       "Acreage": "40",
       "Costs": "400000",
       "MaxPeople": "2",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Luxury",
       "Description": "A luxury room with double bed, sea view, balcony and bathtub",
       "image": "https://www.decorilla.com/online-decorating/wp-content/uploads/2021/12/Serene-contemporary-interior-design-for-an-open-living-space-1.jpg",
@@ -244,7 +271,10 @@
       "Acreage": "45",
       "Costs": "450000",
       "MaxPeople": "2",
-      "Type_Service": "Room",
+      "Type_Service": {
+        "id": 3,
+        "nameTypeService": "Room"
+      },
       "Standard": "Luxury",
       "Description": "A luxury room with double bed, sea view, balcony and jacuzzi",
       "image": "https://hollandgreen.b-cdn.net/app/uploads/2021/08/Modern-kitchen-interior-design-extension-3000x2000.jpg",
@@ -253,18 +283,31 @@
       "Free": "Yes"
     }
   ],
+  "Type_Service": [
+    {
+      "id": 1,
+      "nameTypeService": "Villa"
+    },
+    {
+      "id": 2,
+      "nameTypeService": "House"
+    },
+    {
+      "id": 3,
+      "nameTypeService": "Room"
+    }
+  ],
   "contracts": [
     {
       "id": 1,
       "Contract_Number": "HD001",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
@@ -275,14 +318,13 @@
     {
       "id": 2,
       "Contract_Number": "HD002",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
@@ -293,14 +335,13 @@
     {
       "id": 3,
       "Contract_Number": "HD003",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
@@ -311,14 +352,13 @@
     {
       "id": 4,
       "Contract_Number": "HD004",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
@@ -329,14 +369,13 @@
     {
       "id": 5,
       "Contract_Number": "HD005",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
@@ -347,20 +386,167 @@
     {
       "id": 6,
       "Contract_Number": "HD006",
-      "Customer": {
+      "customers": {
         "id": 1,
-        "Name_Customer": "Nguyen Van A"
+        "Name_Customer": "Nguyen Van Z"
       },
-      "Service": {
+      "services": {
         "id": 1,
-        "Name_Service": "Villa A",
-        "Type_Service": "Villa"
+        "Name_Service": "Villa A"
       },
       "Name_Employee": "Nguyen Van B",
       "Start_Date": "22/02/2023",
       "End_Date": "28/02/2023",
       "Deposit": "500$",
       "Total_Payment": "2200$"
+    },
+    {
+      "Contract_Number": "sadas",
+      "customers": {
+        "id": "1",
+        "Name_Customer": "Nguyen Van Z",
+        "Birthday": "01/01/1990",
+        "Gender": "Male",
+        "Id_card": "123456789",
+        "Phone_number": "0123456789",
+        "Email": "nguyenvana@gmail.com",
+        "Customer_type": "Regular",
+        "Address": "No.1 Street A, District 1, Ho Chi Minh City"
+      },
+      "Name_Employee": "sdasdsadasd",
+      "services": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Acreage": "200",
+        "Costs": "1000000",
+        "MaxPeople": "8",
+        "Type_Service": {
+          "id": 1,
+          "nameTypeService": "Villa"
+        },
+        "Standard": "Luxury",
+        "Description": "A luxury villa with 4 bedrooms and private pool",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max500/217742112.jpg?k=ef9f204032112dac98781b76cf59be8144aff1008f85c02e8e34acbbde477d71&o=&hp=1",
+        "Pool": "Yes",
+        "Floor": "2",
+        "Free": "Yes"
+      },
+      "Start_Date": "2023-07-31",
+      "End_Date": "2023-07-31",
+      "Deposit": 212,
+      "Total_Payment": 21323,
+      "id": 7
+    },
+    {
+      "Contract_Number": "sadas",
+      "customers": {
+        "id": "1",
+        "Name_Customer": "Nguyen Van Z",
+        "Birthday": "01/01/1990",
+        "Gender": "Male",
+        "Id_card": "123456789",
+        "Phone_number": "0123456789",
+        "Email": "nguyenvana@gmail.com",
+        "Customer_type": "Regular",
+        "Address": "No.1 Street A, District 1, Ho Chi Minh City"
+      },
+      "Name_Employee": "sdasdsadasd",
+      "services": {
+        "id": 2,
+        "Name_Service": "Villa B",
+        "Acreage": "150",
+        "Costs": "800000",
+        "MaxPeople": "6",
+        "Type_Service": {
+          "id": 1,
+          "nameTypeService": "Villa"
+        },
+        "Standard": "Deluxe",
+        "Description": "A deluxe villa with 3 bedrooms and private garden",
+        "image": "https://kenhhomestay.com/wp-content/uploads/2018/09/biet-thu-villa-da-nang-9.jpg",
+        "Pool": "No",
+        "Floor": "1",
+        "Free": "Yes"
+      },
+      "Start_Date": "2023-07-01",
+      "End_Date": "2023-07-01",
+      "Deposit": 123,
+      "Total_Payment": 32123,
+      "id": 8
+    },
+    {
+      "Contract_Number": "32123",
+      "customers": {
+        "id": "1",
+        "Name_Customer": "Nguyen Van Z",
+        "Birthday": "01/01/1990",
+        "Gender": "Male",
+        "Id_card": "123456789",
+        "Phone_number": "0123456789",
+        "Email": "nguyenvana@gmail.com",
+        "Customer_type": "Regular",
+        "Address": "No.1 Street A, District 1, Ho Chi Minh City"
+      },
+      "Name_Employee": "3232",
+      "services": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Acreage": "200",
+        "Costs": "1000000",
+        "MaxPeople": "8",
+        "Type_Service": {
+          "id": 1,
+          "nameTypeService": "Villa"
+        },
+        "Standard": "Luxury",
+        "Description": "A luxury villa with 4 bedrooms and private pool",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max500/217742112.jpg?k=ef9f204032112dac98781b76cf59be8144aff1008f85c02e8e34acbbde477d71&o=&hp=1",
+        "Pool": "Yes",
+        "Floor": "2",
+        "Free": "Yes"
+      },
+      "Start_Date": "2023-07-02",
+      "End_Date": "2023-07-03",
+      "Deposit": 23,
+      "Total_Payment": 2321,
+      "id": 9
+    },
+    {
+      "Contract_Number": "sadas",
+      "customers": {
+        "id": "1",
+        "Name_Customer": "Nguyen Van Z",
+        "Birthday": "01/01/1990",
+        "Gender": "Male",
+        "Id_card": "123456789",
+        "Phone_number": "0123456789",
+        "Email": "nguyenvana@gmail.com",
+        "Customer_type": "Regular",
+        "Address": "No.1 Street A, District 1, Ho Chi Minh City"
+      },
+      "Name_Employee": "sdasdsadasd",
+      "services": {
+        "id": 1,
+        "Name_Service": "Villa A",
+        "Acreage": "200",
+        "Costs": "1000000",
+        "MaxPeople": "8",
+        "Type_Service": {
+          "id": 1,
+          "nameTypeService": "Villa"
+        },
+        "Standard": "Luxury",
+        "Description": "A luxury villa with 4 bedrooms and private pool",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max500/217742112.jpg?k=ef9f204032112dac98781b76cf59be8144aff1008f85c02e8e34acbbde477d71&o=&hp=1",
+        "Pool": "Yes",
+        "Floor": "2",
+        "Free": "Yes"
+      },
+      "Start_Date": "2023-07-31",
+      "End_Date": "2023-07-31",
+      "Deposit": 2312,
+      "Total_Payment": 32133,
+      "id": 10
     }
   ]
 }

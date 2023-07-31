@@ -117,7 +117,7 @@ function Body(){
                             <p class="card-text">Acreage: {service.Acreage}m2</p>
                             {/* <p class="card-text">{service.Costs}</p> */}
                             {/* <p class="card-text">{service.MaxPeople}</p> */}
-                            <p class="card-text">Type Service: {service.Type_Service}</p>
+                            <p class="card-text">Type Service: {service.Type_Service.nameTypeService}</p>
                             {/* <p class="card-text">{service.Standard}</p> */}
                             <p class="card-text">Description: {service.Description}</p>
                           </div>

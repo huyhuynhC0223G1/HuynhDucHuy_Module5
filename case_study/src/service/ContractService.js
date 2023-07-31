@@ -6,7 +6,19 @@ export async function getListContracts(){
     return resolve.data;
 }
 
-export async function deleteContracts(id){
-    const resolve = await axios.delete("/contracts" + id)
+export async function deleteContract(id){
+    const resolve = await axios.delete("/contracts/" + id)
     return resolve.data;
+}
+export async function createContract(contract) {
+    const resolve = await axios.post("/contracts", contract)
+    return resolve.data;
+}
+export async function updateContract(id, contract) {
+    const resolve = await axios.patch("/contracts/" + id, contract)
+    return resolve.data;
+}
+export async function getContractById(id) {
+    const resolve = await axios.get("/contracts/" + id)
+    return resolve.data
 }
