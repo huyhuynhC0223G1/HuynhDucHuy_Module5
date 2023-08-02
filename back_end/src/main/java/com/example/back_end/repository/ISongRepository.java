@@ -15,8 +15,7 @@ public interface ISongRepository extends JpaRepository<Song, Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "insert into song(name,singer,musician,playTime,favourite) " +
-            "value(:#{#song.name},:#{#song.singer},:#{#song.musician},:#{#song.playTime},:#{#song.favourite})", nativeQuery = true)
+    @Query(value = "insert into song(name,singer,musician,playTime,favourite) value(:#{#song.name},:#{#song.singer},:#{#song.musician},:#{#song.playTime},:#{#song.favourite})", nativeQuery = true)
     void createSong(@Param("song") Song song);
     @Transactional
     @Modifying
