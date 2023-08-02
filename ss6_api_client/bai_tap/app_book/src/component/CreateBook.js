@@ -3,7 +3,7 @@ import { createNewBook } from "../service/BookService";
 import { Link, useNavigate } from "react-router-dom";
 
 
-function CreateNewBook({ history }) {
+function CreateNewBook() {
     const navigate= useNavigate();
     return (
         <>
@@ -14,6 +14,7 @@ function CreateNewBook({ history }) {
                     await createNewBook(values);
                     alert("The book has been added successfully!");
                     navigate("/")
+                    
                 }}
             >
                 {({ isSubmitting }) => (
