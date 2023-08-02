@@ -36,6 +36,16 @@ public class SongController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteSong(@PathVariable Integer id){
+        this.songService.deleteSong(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @GetMapping("/search/{name}")
+    public ResponseEntity<?> searchMusic(@PathVariable(value = "name",required = false) String name){
+        return new ResponseEntity<>(this.songService.searchSongByName(name),HttpStatus.OK);
+    }
+
 //    @GetMapping("/{id}")
 //    @ResponseBody
 //    public ResponseEntity<?> getSongById(@PathVariable Integer id) {

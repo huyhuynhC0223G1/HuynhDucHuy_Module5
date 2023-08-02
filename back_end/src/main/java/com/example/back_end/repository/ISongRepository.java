@@ -22,6 +22,15 @@ public interface ISongRepository extends JpaRepository<Song, Integer> {
     @Query(value = "update song set status = true where id = :id", nativeQuery = true)
     void  updateStatus(@Param("id") Integer id );
 
+    @Transactional
+    @Modifying
+    @Query(value = "delete from song where id = :id", nativeQuery = true)
+    void deleteSong(@Param("id") int id);
+
+    @Transactional
+    @Modifying
+    @Query(value = "select * from song where name like %:name%", nativeQuery = true )
+    List<Song> searchSongByName(@Param("name") String nameMusic);
 //    @Query(nativeQuery = true, value = "select * from song where id = :id")
 //    Song getSongById(@Param("idSearch") Integer id);
 }

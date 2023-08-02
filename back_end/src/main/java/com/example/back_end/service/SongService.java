@@ -33,6 +33,16 @@ public class SongService implements ISongService {
         songRepository.updateStatus(id);
     }
 
+    @Override
+    public void deleteSong(Integer id) {
+        songRepository.deleteSong(id);
+    }
+
+    @Override
+    public List<Song> searchSongByName(String name) {
+        return songRepository.searchSongByName(name);
+    }
+
 //    @Override
 //    public Song getSongById(Integer id) {
 //        return songRepository.getSongById(id);
